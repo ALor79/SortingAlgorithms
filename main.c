@@ -69,5 +69,10 @@ int main() {
     heapSort(numbers,n);
     printArray(n,numbers);
 
+    puts("");
+    puts("insertion sort:");
+    randomiseArray(n,numbers);
+    insertionSort(numbers,n);
+    printArray(n,numbers);
     return 0;
 }
