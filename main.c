@@ -19,6 +19,7 @@ void randomiseArray(int arraySize, int arr[])
         arr[random] = temp;
     }
 }
+//print array prints the array to the stdin
 void printArray(int arraySize, int arr[])
 {
 
