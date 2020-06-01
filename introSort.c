@@ -5,9 +5,9 @@
 #include "partition.h"
 #include "heapSort.h"
 int maxDepth(int length){
-    return log(length)* 2;
+    return (int) log(length)* 2;
 }
-void introSort(int array[],int begin,int length,int maxDepth)
+void introsort(int array[],int begin,int length,int maxDepth)
 {
 
 
@@ -18,8 +18,11 @@ void introSort(int array[],int begin,int length,int maxDepth)
     }else {
         if (begin < length) {
             int partition_border = partition(array, begin,length);  // assume this function does pivot selection
-            introSort(array, begin, partition_border - 1, maxDepth - 1);
-            introSort(array, partition_border + 1, length, maxDepth - 1);
+            introsort(array, begin, partition_border - 1, maxDepth - 1);
+            introsort(array, partition_border + 1, length, maxDepth - 1);
         }
     }
+}
+void introSort(int array[],int length){
+    introsort(array,0,length-1,maxDepth(length));
 }

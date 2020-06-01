@@ -12,10 +12,6 @@ iLeftChild(int i) {
     return 2 * i + 1;
 }
 
-//iRightChild(int i) {
-//    return 2 * i + 2;
-//}
-
 void siftDown(int a[], int start, int end) {
     int root = start;
     while (iLeftChild(root) <= end)//While the root has at least one child
@@ -39,14 +35,14 @@ void siftDown(int a[], int start, int end) {
 
     }
 }
-void heapify(int array[], int count){
+void heapify(int array[], int length){
 //    start is assigned the index in 'a' of the last parent node
 //    the last element in a 0-based array is at index count-1; find the parent of that element
-    int start=iParent(count-1);
+    int start=iParent(length-1);
     while (start>=0){
         /*sift down the node at index 'start' to the proper place such that all nodes below
         the start index are in heap order*/
-        siftDown(array, start, count - 1);
+        siftDown(array, start, length - 1);
         //go to the next parent node
         start--;
         //after sifting down the root all nodes/elements are in heap order

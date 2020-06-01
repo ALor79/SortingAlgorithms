@@ -5,5 +5,5 @@
 #ifndef SORT_QUICKSORT_H
 #define SORT_QUICKSORT_H
 
-void quickSort(int array[], int begin, int end);
+void quickSort(int array[], int length);
 #endif //SORT_QUICKSORT_H

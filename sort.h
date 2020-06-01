@@ -7,7 +7,7 @@
 
 #include "heapSort.h"
 #include "introSort.h"
-#include "bubblesort.h"
+#include "bubbleSort.h"
 #include "quickSort.h"
 #include "mergeSort.h"
 #endif //SORT_SORT_H

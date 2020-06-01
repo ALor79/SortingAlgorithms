@@ -19,15 +19,54 @@ void randomiseArray(int arraySize, int arr[])
         arr[random] = temp;
     }
 }
+void printArray(int arraySize, int arr[])
+{
+
+    for (size_t i = 0; i < arraySize; i++)
+    {
+        printf("%d\t", arr[i]);
+    }
+    puts("");puts("");
+}
 int main() {
 
     int numbers[]={13,7,8,75,6,2,48,2,36,4,5,6,7,87,9};
     int n=sizeof(numbers)/ sizeof(numbers[0]);
-    quickSort(numbers,0,n-1);
+    puts("");
+    puts("intro sort:");
     randomiseArray(n,numbers);
-    introSort(numbers,0,n-1,maxDepth(n));
-    for (int i = 0; i < n; ++i) {
-        printf("%d\n",numbers[i]);
-    }
+    introSort(numbers,n);
+    printArray(n,numbers);
+
+    puts("");
+    puts("bubble sort:");
+    randomiseArray(n,numbers);
+    bubbleSort(numbers,n);
+    printArray(n,numbers);
+
+    puts("");
+    puts("quick sort:");
+    randomiseArray(n,numbers);
+    quickSort(numbers,n);
+    printArray(n,numbers);
+
+    puts("");
+    puts("merge sort:(Bottom->Up)");
+    randomiseArray(n,numbers);
+    mergeSort(numbers,n);
+    printArray(n,numbers);
+
+    puts("");
+    puts("merge sort(Top->Down):");
+    randomiseArray(n,numbers);
+    TopDownMergeSort(numbers,n);
+    printArray(n,numbers);
+
+    puts("");
+    puts("heap sort:");
+    randomiseArray(n,numbers);
+    heapSort(numbers,n);
+    printArray(n,numbers);
+
     return 0;
 }

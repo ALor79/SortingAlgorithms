@@ -5,5 +5,5 @@
 #ifndef SORT_INTROSORT_H
 #define SORT_INTROSORT_H
 int maxDepth(int length);
-void introSort(int array[],int begin,int length,int maxDepth);
+void introSort(int array[],int length);
 #endif //SORT_INTROSORT_H
