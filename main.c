@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "sort.h"
-
+#include "swap.h"
 //randomiseArray should randomly mix the order of elements in an array
 void randomiseArray(int arraySize, int arr[])
 {
@@ -15,9 +15,7 @@ void randomiseArray(int arraySize, int arr[])
         //getting a random index
         int random = rand() % arraySize;
         //swaping algorithm
-        int temp = arr[i];
-        arr[i] = arr[random];
-        arr[random] = temp;
+        swap(&arr[i],&arr[random]);
     }
 }
 //print array prints the array to the stdin
@@ -37,7 +35,7 @@ void newline(size_t x){
 }
 int main() {
 
-    int numbers[]={13,7,8,75,6,2,48,2,36,4,5,6,7,87,9};
+    int numbers[]={1,2,3,4,5,15,6,6,7,7,8,9,10,14,7,9,16};
     int n=sizeof(numbers)/ sizeof(numbers[0]);
     newline(1);
     puts("intro sort:");
@@ -96,6 +94,13 @@ int main() {
     printArray(n,numbers);
     newline(2);
 
+    puts("tim sort:");
+    randomiseArray(n,numbers);
+    printArray(n,numbers);
+    newline(1);
+    timSort(numbers,n);
+    printArray(n,numbers);
+    newline(2);
 
     return 0;
 }
