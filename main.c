@@ -115,6 +115,14 @@ int main() {
     selectionSort(numbers,n);
     printArray(n,numbers);
     newline(2);
+
+    puts("shell sort:");
+    randomiseArray(n,numbers);
+    printArray(n,numbers);
+    printArrow();
+    shellSort(numbers,n);
+    printArray(n,numbers);
+    newline(2);
     return 0;
 }
 
