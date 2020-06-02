@@ -1,3 +1,5 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "cert-msc50-cpp"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -33,15 +35,19 @@ void newline(size_t x){
         puts("");
     }
 }
+void printArrow(){
+    puts("\n|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t");
+    puts("V\tV\tV\tV\tV\tV\tV\tV\tV\tV\tV\tV\tV\tV\tV\tV\tV\t");
+}
 int main() {
 
-    int numbers[]={1,2,3,4,5,15,6,6,7,7,8,9,10,14,7,9,16};
+    int numbers[]={1,2,3,4,5,15,6,6,17,7,8,9,10,14,7,9,16};
     int n=sizeof(numbers)/ sizeof(numbers[0]);
     newline(1);
     puts("intro sort:");
     randomiseArray(n,numbers);
     printArray(n,numbers);
-    newline(1);
+    printArrow();
     introSort(numbers,n);
     printArray(n,numbers);
     newline(2);
@@ -49,7 +55,7 @@ int main() {
     puts("bubble sort:");
     randomiseArray(n,numbers);
     printArray(n,numbers);
-    newline(1);
+    printArrow();
     bubbleSort(numbers,n);
     printArray(n,numbers);
     newline(2);
@@ -57,7 +63,7 @@ int main() {
     puts("quick sort:");
     randomiseArray(n,numbers);
     printArray(n,numbers);
-    newline(1);
+    printArrow();
     quickSort(numbers,n);
     printArray(n,numbers);
     newline(2);
@@ -65,7 +71,7 @@ int main() {
     puts("merge sort:(Bottom->Up):");
     randomiseArray(n,numbers);
     printArray(n,numbers);
-    newline(1);
+    printArrow();
     mergeSort(numbers,n);
     printArray(n,numbers);
     newline(2);
@@ -73,7 +79,7 @@ int main() {
     puts("merge sort(Top->Down):");
     randomiseArray(n,numbers);
     printArray(n,numbers);
-    newline(1);
+    printArrow();
     TopDownMergeSort(numbers,n);
     printArray(n,numbers);
     newline(2);
@@ -81,7 +87,7 @@ int main() {
     puts("heap sort:");
     randomiseArray(n,numbers);
     printArray(n,numbers);
-    newline(1);
+    printArrow();
     heapSort(numbers,n);
     printArray(n,numbers);
     newline(2);
@@ -89,7 +95,7 @@ int main() {
     puts("insertion sort:");
     randomiseArray(n,numbers);
     printArray(n,numbers);
-    newline(1);
+    printArrow();
     insertionSort(numbers,n);
     printArray(n,numbers);
     newline(2);
@@ -97,10 +103,19 @@ int main() {
     puts("tim sort:");
     randomiseArray(n,numbers);
     printArray(n,numbers);
-    newline(1);
+    printArrow();
     timSort(numbers,n);
     printArray(n,numbers);
     newline(2);
 
+    puts("selection sort:");
+    randomiseArray(n,numbers);
+    printArray(n,numbers);
+    printArrow();
+    selectionSort(numbers,n);
+    printArray(n,numbers);
+    newline(2);
     return 0;
 }
+
+#pragma clang diagnostic pop

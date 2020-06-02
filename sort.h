@@ -12,4 +12,5 @@
 #include "mergeSort.h"
 #include "insertionSort.h"
 #include "timSort.h"
+#include "selectionSort.h"
 #endif //SORT_SORT_H
