@@ -14,4 +14,5 @@
 #include "timSort.h"
 #include "selectionSort.h"
 #include "shellSort.h"
+#include "treeSort.h"
 #endif //SORT_SORT_H

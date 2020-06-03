@@ -1,44 +1,10 @@
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "cert-msc50-cpp"
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 #include "sort.h"
-#include "swap.h"
-//randomiseArray should randomly mix the order of elements in an array
-void randomiseArray(int arraySize, int arr[])
-{
-    static int Randomer=0;
-    //giving rand a seed using time
-    srand(time(NULL)+Randomer++);
-    //we swap every value with a random index(it can be it self)
-    for (size_t i = 0; i < arraySize; i++)
-    {
-        //getting a random index
-        int random = rand() % arraySize;
-        //swaping algorithm
-        swap(&arr[i],&arr[random]);
-    }
-}
-//print array prints the array to the stdin
-void printArray(int arraySize, int arr[])
-{
+#include "myPrinter.h"
+#include "array.h"
 
-    for (size_t i = 0; i < arraySize; i++)
-    {
-        printf("%d\t", arr[i]);
-    }
-
-}
-void newline(size_t x){
-    for (size_t i = 0; i < x; ++i) {
-        puts("");
-    }
-}
-void printArrow(){
-    puts("\n|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t|\t");
-    puts("V\tV\tV\tV\tV\tV\tV\tV\tV\tV\tV\tV\tV\tV\tV\tV\tV\t");
-}
 int main() {
 
     int numbers[]={1,2,3,4,5,15,6,6,17,7,8,9,10,14,7,9,16};
@@ -123,6 +89,15 @@ int main() {
     shellSort(numbers,n);
     printArray(n,numbers);
     newline(2);
+
+    puts("tree sort:");
+    randomiseArray(n,numbers);
+    printArray(n,numbers);
+    printArrow();
+    treeSort(numbers,n);
+    printArray(n,numbers);
+    newline(2);
+
     return 0;
 }
 
