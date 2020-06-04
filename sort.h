@@ -15,4 +15,5 @@
 #include "selectionSort.h"
 #include "shellSort.h"
 #include "treeSort.h"
+#include "linkedListInsertionSort.h"
 #endif //SORT_SORT_H
