@@ -19,4 +19,5 @@
 #include "bogoSort.h"
 #include "beadSort.h"
 #include "gnomeSort.h"
+#include "cocktailShakerSort.h"
 #endif //SORT_SORT_H

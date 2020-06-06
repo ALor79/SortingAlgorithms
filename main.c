@@ -64,6 +64,9 @@ int main() {
     puts("tree sort:");
     printSortFunction(numbers, n, treeSort);
 
+    puts("cocktail shaker sort:");
+    printSortFunction(numbers, n, cocktailShakerSort);
+
 
     return 0;
 }
