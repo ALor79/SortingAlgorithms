@@ -16,4 +16,7 @@
 #include "shellSort.h"
 #include "treeSort.h"
 #include "linkedListInsertionSort.h"
+#include "bogoSort.h"
+#include "beadSort.h"
+#include "gnomeSort.h"
 #endif //SORT_SORT_H
